@@ -1,0 +1,16 @@
+{
+  "name": "meal-exam-project",
+  "version": "1.0.0",
+  "description": "MealDB exam project",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

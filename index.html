@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MealDB</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ 
+    <!-- Header -->
+<nav class="navbar navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand" href="#" id="homeLink">
+                 Meal Explorer
+</a>
+ 
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-warning" id="favoritesLink">
+                    <i class="fas fa-heart"></i> Обрані (<span id="favoritesCount">0</span>)
+                </button>
+                
+                <form class="d-flex" id="searchForm">
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Пошук страви"
+                        id="searchInput">
+                    <button class="btn btn-warning" type="submit">
+                        Знайти
+                    </button>
+                </form>
+            </div>
+</div>
+</nav>
+ 
+    <!-- Hero -->
+<section class="bg-light py-5">
+<div class="container text-center">
+<h1>Каталог рецептів</h1>
+<p class="lead">
+                Знайди улюблену страву та переглянь рецепт
+</p>
+<button class="btn btn-success mt-2" id="randomMealBtn">Випадкова страва</button>
+</div>
+</section>
+ 
+    <!-- Categories -->
+<section class="container py-5">
+<h2 class="mb-4">Категорії</h2>
+ 
+        <div class="row g-3" id="categoriesContainer">
+ 
+            <div class="col-md-3">
+<button class="btn btn-outline-primary w-100">
+                    Beef
+</button>
+</div>
+ 
+            <div class="col-md-3">
+<button class="btn btn-outline-primary w-100">
+                    Chicken
+</button>
+</div>
+ 
+            <div class="col-md-3">
+<button class="btn btn-outline-primary w-100">
+                    Dessert
+</button>
+</div>
+ 
+            <div class="col-md-3">
+<button class="btn btn-outline-primary w-100">
+                    Seafood
+</button>
+</div>
+ 
+        </div>
+</section>
+ 
+    <!-- Meals -->
+<section class="container pb-5">
+<h2 class="mb-4" id="sectionTitle">Популярні страви</h2>
+ 
+        <div class="row g-4" id="mealsContainer">
+ 
+            <!-- Card -->
+<div class="col-md-4">
+<div class="card h-100 shadow-sm">
+<img
+                        src="https://via.placeholder.com/400x250"
+                        class="card-img-top"
+                        alt="Meal">
+ 
+                    <div class="card-body">
+<h5 class="card-title">
+                            Beef Wellington
+</h5>
+ 
+                        <p class="card-text">
+                            Короткий опис рецепта.
+</p>
+ 
+                        <button
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#mealModal">
+                            Детальніше
+</button>
+</div>
+</div>
+</div>
+ 
+            <div class="col-md-4">
+<div class="card h-100 shadow-sm">
+<img
+                        src="https://via.placeholder.com/400x250"
+                        class="card-img-top"
+                        alt="Meal">
+ 
+                    <div class="card-body">
+<h5 class="card-title">
+                            Chicken Curry
+</h5>
+ 
+                        <p class="card-text">
+                            Короткий опис рецепта.
+</p>
+ 
+                        <button class="btn btn-primary">
+                            Детальніше
+</button>
+</div>
+</div>
+</div>
+ 
+            <div class="col-md-4">
+<div class="card h-100 shadow-sm">
+<img
+                        src="https://via.placeholder.com/400x250"
+                        class="card-img-top"
+                        alt="Meal">
+ 
+                    <div class="card-body">
+<h5 class="card-title">
+                            Apple Pie
+</h5>
+ 
+                        <p class="card-text">
+                            Короткий опис рецепта.
+</p>
+ 
+                        <button class="btn btn-primary">
+                            Детальніше
+</button>
+</div>
+</div>
+</div>
+ 
+        </div>
+</section>
+ 
+    <!-- Modal -->
+<div
+        class="modal fade"
+        id="mealModal"
+        tabindex="-1">
+ 
+        <div class="modal-dialog modal-lg">
+<div class="modal-content">
+ 
+                <div class="modal-header">
+<h5 class="modal-title" id="modalTitle">
+                        Назва страви
+</h5>
+ 
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+</button>
+</div>
+ 
+                <div class="modal-body" id="modalBody">
+ 
+                    <img
+                        src="https://via.placeholder.com/800x400"
+                        class="img-fluid rounded mb-3"
+                        alt="Meal">
+ 
+                    <h4>Інгредієнти</h4>
+ 
+                    <ul>
+<li>Інгредієнт 1</li>
+<li>Інгредієнт 2</li>
+<li>Інгредієнт 3</li>
+</ul>
+ 
+                    <h4>Інструкція</h4>
+ 
+                    <p>
+                        Тут буде текст рецепта.
+</p>
+ 
+                </div>
+ 
+            </div>
+</div>
+ 
+    </div>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/app.js" type="module"></script>
+</body>
+</html>
